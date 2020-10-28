@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#4f5f6f" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:layout_marginLeft="100dp"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#010101"/>
+
+    <TextView
+        android:id="@+id/short_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한줄 이야기"
+        android:layout_marginLeft="100dp"
+        android:textSize="15dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#010101"/>
+
+
+</RelativeLayout>
