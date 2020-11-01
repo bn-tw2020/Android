@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -30,10 +31,8 @@ public class MainPage extends AppCompatActivity {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.instagram), "instagram", "this is instagram");
-
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.youtube), "youtube", "this is youtube");
-
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.facebook), "facebook", "this is facebook");
 
@@ -51,8 +50,20 @@ public class MainPage extends AppCompatActivity {
                 //intent.putExtra("profile", (Parcelable) item.getProfile());
                 intent.putExtra("name", item.getName());
                 intent.putExtra("short_story",item.getShort_story());
-                startActivity(intent);
+                startActivityForResult(intent, 101);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode ==101){
+            if(data !=null){
+                String result = data.getStringExtra("result");
+                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

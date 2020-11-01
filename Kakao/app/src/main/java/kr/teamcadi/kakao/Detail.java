@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +27,28 @@ public class Detail extends AppCompatActivity {
         name.setText(intent.getStringExtra("name"));
         short_story.setText(intent.getStringExtra("short_story"));
 
+        Button chat = (Button) findViewById(R.id.chat);
+        Button back = (Button) findViewById(R.id.back);
 
+        // 대화하기 버튼 클릭 시
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        //뒤로 가기 버튼
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                returnToMain();
+            }
+        });
+    }
+    public void returnToMain(){
+        Intent i = new Intent();
+        i.putExtra("result","리스트로 돌아왔습니다.");
+        setResult(RESULT_OK, i);
+        finish();
     }
 }
