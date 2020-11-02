@@ -19,7 +19,7 @@ public class Detail extends AppCompatActivity {
         Intent intent = getIntent();
 
         //ImageView profile = (ImageView) findViewById(R.id.profile);
-        TextView name = (TextView) findViewById(R.id.name);
+        final TextView name = (TextView) findViewById(R.id.name);
         TextView short_story = (TextView) findViewById(R.id.short_story);
 
         //img=Integer.parseInt(intent.getStringExtra("profile"));
@@ -34,7 +34,10 @@ public class Detail extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(Detail.this, Chatting.class);
+                i.putExtra("name", name.getText());
+                startActivity(i);
+                finish();
             }
         });
         //뒤로 가기 버튼

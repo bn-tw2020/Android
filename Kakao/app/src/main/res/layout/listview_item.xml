@@ -6,19 +6,19 @@
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:background="#4f5f6f" />
+        android:background="#ffffffff" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="닉네임"
-        android:layout_marginLeft="100dp"
-        android:textSize="25dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="13dp"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
         android:textColor="#010101"/>
@@ -28,9 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="한줄 이야기"
-        android:layout_marginLeft="100dp"
-        android:textSize="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="10dp"
+        android:layout_marginTop="33dp"
         android:textColor="#010101"/>
 
 

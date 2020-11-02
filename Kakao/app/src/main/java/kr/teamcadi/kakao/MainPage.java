@@ -35,6 +35,12 @@ public class MainPage extends AppCompatActivity {
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.youtube), "youtube", "this is youtube");
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.facebook), "facebook", "this is facebook");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.instagram), "instagram", "this is instagram");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.youtube), "youtube", "this is youtube");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.facebook), "facebook", "this is facebook");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.instagram), "instagram", "this is instagram");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.youtube), "youtube", "this is youtube");
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.facebook), "facebook", "this is facebook");
 
         // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
         // 아이템을 클릭할 때의 이벤트 리스너를 등록함
